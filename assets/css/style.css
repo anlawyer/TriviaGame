@@ -11,6 +11,10 @@ img {
 	width: 65%;
 }
 
+input[type='radio'] {
+	margin-left: 20px;
+}
+
 .page1, .jumbotron, .cent {
 	text-align: center;
 }
