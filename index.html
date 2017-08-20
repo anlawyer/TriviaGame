@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trivia Game</title>
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+	<script src="assets/javascript/app.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+	<!-- START PAGE -->
+	<div id="Page1" class="page page1" style="">
+		<div class="jumbotron">
+    		<img src="assets/images/office.png">
+   		</div>
+			<div class="row">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<p>Ready for trivia? The timer will begin counting down as soon as you click "start".</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-6">
+				<button onclick="show('Page2')" type="button" class="btn btn-secondary btn-lg start">START</button>
+			</div>
+	</div>
+
+	<!-- GAME PAGE -->
+	<div id="Page2" class="page page2" style="display:none">
+		<div class="jumbotron">
+    		<img src="assets/images/office.png">
+   		</div>
+   		<div class="container cent">
+			<div class="row left">
+				<div class=" panel panel-default">
+					<div class="panel-body">
+						<h3>Time remaining: <span id="timer">120</span></h3>
+
+						<div class="col-6">
+							<form>
+							<p>
+								<div class="q">Bears, beets, ... </div>
+								<input type="radio" name="answer1" value="incorrect"> Battle Star Trek
+								<input type="radio" name="answer1" value="incorrect"> Battle Star Wars
+								<input type="radio" name="answer1" value="correct"> Battlestar Galactica
+								<input type="radio" name="answer1" value="incorrect"> Beers
+							</p>
+							<p>
+								<div class="q">What state does Michael move to with Holly?</div>
+								<input type="radio" name="answer2" value="incorrect"> California
+								<input type="radio" name="answer2" value="correct"> Colorado
+								<input type="radio" name="answer2" value="incorrect"> Connecticut
+								<input type="radio" name="answer2" value="incorrect"> Canada
+							</p>
+							<p>
+								<div class="q">How much does Angela's "premature" baby weigh?</div>
+								<input type="radio" name="answer3" value="incorrect"> 5 lb, 7 oz
+								<input type="radio" name="answer3" value="incorrect"> 7 lb, 7 oz
+								<input type="radio" name="answer3" value="correct"> 9 lb, 7 oz
+								<input type="radio" name="answer3" value="incorrect"> 11 lb, 7 oz
+							</p>
+							<p>
+								<div class="q">Who's job do Jim, Karen and Michael interview for in Season 3?</div>
+								<input type="radio" name="answer4" value="correct"> Jan's
+								<input type="radio" name="answer4" value="incorrect"> David Wallace's
+								<input type="radio" name="answer4" value="incorrect"> Ryan's
+								<input type="radio" name="answer4" value="incorrect"> Michael's
+							</p>
+							<p>	
+								<div class="q">What Sesame Street character does Kevin turn Oscar into after Oscar makes Kevin into the Cookie Monster?</div>
+								<input type="radio" name="answer5" value="incorrect"> Big Bird
+								<input type="radio" name="answer5" value="incorrect"> Cookie Monster
+								<input type="radio" name="answer5" value="incorrect"> Oscar the Grouch
+								<input type="radio" name="answer5" value="correct"> The Count
+							</p>
+							<p>
+								<div class="q">How many vasectomies does Michael claim to have had?</div>
+								<input type="radio" name="answer6" value="incorrect"> 1
+								<input type="radio" name="answer6" value="incorrect"> 2
+								<input type="radio" name="answer6" value="correct"> 3
+								<input type="radio" name="answer6" value="incorrect"> 4
+							</p>
+							<p>
+								<div class="q">What does Darryl say he developed an allergy to at age 35?</div>
+								<input type="radio" name="answer7" value="incorrect"> Peanuts
+								<input type="radio" name="answer7" value="correct"> Soy
+								<input type="radio" name="answer7" value="incorrect"> Pollen
+								<input type="radio" name="answer7" value="incorrect"> Milk
+							</p>
+							<p>
+								<div class="q">What is the name of Pam's character for Jim in her Christams gift comic to him?</div>
+								<input type="radio" name="answer8" value="incorrect"> Biker Man
+								<input type="radio" name="answer8" value="incorrect"> Biker Bear
+								<input type="radio" name="answer8" value="correct"> Bear Man
+								<input type="radio" name="answer8" value="incorrect"> Bear Biker
+							</p>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<button onclick="show('Page3')" class="btn btn-secondary btn-lg done">DONE</button>
+		</div>
+	</div>
+
+	<!-- DONE PAGE -->
+    <div id="Page3" class="page page3" style="display:none">
+		<div class="jumbotron">
+    		<img src="assets/images/office.png">
+   		</div>
+		<div class="container cent">
+			<div class="row left">
+				<div class=" panel panel-default">
+					<div class="panel-body">
+						<div class="col-6">
+					        <p>Here's how you did:</p>
+							<div class="totals">
+						        <p>Total correct: <span class="totalCorrect"> </span></p>
+						        <p>Total incorrect: <span class="totalIncorrect"> </span></p>
+						        <p>Total unanswered: <span class="totalUnanswered"></span></p>
+					        </div>
+				        </div>
+			        </div>
+		        </div>
+			</div>
+			<br>
+	        <button onclick="show('Page1')" class="btn btn-secondary btn-lg restart">Start over!</button>
+	    </div>
+    </div>
+
+</body>
+</html>
+

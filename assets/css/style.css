@@ -1,0 +1,29 @@
+p, form {
+	font-size: 18px;
+	/*font-family: serif, "American Typewriter";*/
+}
+
+body {
+	background: url(../images/gridme.png);
+}
+
+img {
+	width: 65%;
+}
+
+.page1, .jumbotron, .cent {
+	text-align: center;
+}
+
+.q {
+	margin: 20px 0px 5px 0px;
+}
+
+.btn {
+	margin: 35px 0px 35px 0px;
+}
+
+.left {
+	display: inline-block;
+	text-align: left;
+}
